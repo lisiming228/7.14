@@ -39,7 +39,7 @@ a{
     height: 100%;
     overflow: hidden;
 }
-.market-inner .bottom a:hover img{
+.market-inner .bottom a:hover .market-op-img{
     opacity: 0.7;
 }
 .market-inner .head-inner-selected{
