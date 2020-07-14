@@ -1,0 +1,94 @@
+a{
+    text-decoration: none;
+}
+.market-inner{
+    width: 462px;
+    height: 282px;
+    margin: 10px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.09);
+    overflow: hidden;
+}
+.head{
+    height: 57px;
+}
+.head-inner{
+    width: 191px;
+    height: 57px;
+    line-height: 57px;
+    font-size: 18px;
+    padding: 0 20px;
+    float: left;
+    text-align: center;
+    color: #000;
+    background-color: #f1f1f1;
+}
+.market-inner .bottom{
+    position: relative;
+    overflow: hidden;
+}
+.market-inner .bottom  .market-op-img{
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    width: 200px;
+    height: 200px;
+    transition: all 0.3s;
+}
+.market-inner .bottom-item{
+    width: 462px;
+    height: 100%;
+    overflow: hidden;
+}
+.market-inner .bottom a:hover img{
+    opacity: 0.7;
+}
+.market-inner .head-inner-selected{
+    color:#fff;
+    background-color: #00B262;
+}
+.market-inner .inner-title{
+    position: absolute;
+    width:257px;
+    height: 79px;
+    top:86px;
+    left:0;
+    background-color: rgba(195,195,195,.3);
+    padding-top: 8px;
+}
+.market-inner .inner-border{
+    position: absolute;
+    left:257px;
+    top:86px;
+    width: 0;
+    height: 0;
+    border-width:43.5px 34px;
+    border-style: solid;
+    border-color: transparent transparent transparent  rgba(195,195,195,.3);
+}
+.market-inner .bottom .inner-title img{
+    width: 23px;
+    height: 23px;
+    top:10px;
+    margin-left: 26px;
+    /* vertical-align: middle; */
+    
+}
+.market-inner .inner-title span{
+    /* float: left; */
+    font-size: 24px;
+    margin-left: 8px;
+    color:#00b262;
+    font-weight: 700;
+    /* margin-top: 12px; */
+}
+ .market-inner .inner-title p{
+    margin: 0;
+    margin-left: 26px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 29px;
+    color: #000;
+}
+.hidden{
+    display: none;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天猫选项卡仿写</title>
+    <link rel="stylesheet" href="option.css">
+</head>
+<body>
+    <div class="market-inner">
+        <div class="head">
+            <a href="javascript:;" class="head-inner  head-inner-selected">今日疯抢</a>
+            <a href="javascript:;" class="head-inner">量贩装</a>
+        </div>
+        <div class="bottom">
+            <div class="bottom-item">
+                <a href="#">
+                    <img src="images/op1.jpg" alt="" class="market-op-img">
+                    <div class="inner-title">
+                        <img src="images/paper-icon.png" alt="">
+                        <span>爆款直降</span>
+                        <p>粮油调味</p>
+                    </div>
+                    <div class="inner-border"></div>
+                </a>
+            </div>
+            <div class="bottom-item" style="display: none;">
+                <a href="#">
+                    <img src="images/op2.jpg" class="market-op-img">
+                    <div class="inner-title">
+                        <img src="images/paper-icon.png" alt="">
+                        <span>欢乐零食购</span>
+                        <p>爆款直降</p>
+                    </div>
+                    <div class="inner-border"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var links=document.querySelectorAll(".head .head-inner");
+        var lists=document.querySelectorAll(".market-inner .bottom-item");
+        var index=0;
+        for(let i=0;i<links.length;i++){
+            links[i].onmouseover=function(){
+                for(var j=0;j<lists.length;j++){
+                    links[j].className="head-inner";
+                    lists[j].style.display="none";
+                }
+                this.className="head-inner head-inner-selected"
+                lists[i].style.display="block";
+            }
+            links[i].onmouseout=function(){
+                index=i;
+                console.log(i)
+            }
+        }
+        var intervalBox = setInterval(function () {
+            for(var j=0;j<lists.length;j++){
+                    links[j].className="head-inner";
+                    lists[j].style.display="none";
+            }
+            links[index].className="head-inner head-inner-selected";
+            lists[index].style.display="block";
+            if(index){
+                index=0;
+            }else{
+                index=1;
+            }
+        },3000)
+        
+    </script>
+</body>
+</html>
